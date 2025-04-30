@@ -62,7 +62,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
     setIsLoading(false);
   }, []);
 
-  // Simulate API delays
   const delay = (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -71,7 +70,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
     setIsLoading(true);
 
     try {
-      // For a real app, this would be an API call
       await delay(1000);
 
       // Simulate user validation

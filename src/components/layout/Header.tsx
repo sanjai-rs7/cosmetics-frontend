@@ -77,12 +77,12 @@ const Header = () => {
 
           {/* Right Icons */}
           <div className="flex items-center space-x-4">
-            <button
+            {/* <button
               className="text-burgundy hover:text-rose-gold transition-colors duration-200"
               aria-label="Search"
             >
               <Search size={20} />
-            </button>
+            </button> */}
 
             <Link
               to={currentUser ? "/account" : "/login"}

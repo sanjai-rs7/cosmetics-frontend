@@ -43,12 +43,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
             >
               <ShoppingBag size={20} />
             </button>
-            {/* <button
+            <button
               className="bg-cream p-2 rounded-full text-burgundy hover:bg-white transition-colors"
               aria-label="Add to wishlist"
             >
               <Heart size={20} />
-            </button> */}
+            </button>
           </div>
         </div>
 
