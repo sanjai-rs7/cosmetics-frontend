@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cream text-burgundy font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-burgundy leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-burgundy text-cream hover:bg-burgundy-light focus:ring-burgundy;
+  }
+
+  .btn-secondary {
+    @apply btn bg-rose-gold text-cream hover:bg-opacity-90 focus:ring-rose-gold;
+  }
+
+  .btn-outline {
+    @apply btn border border-burgundy text-burgundy hover:bg-burgundy hover:text-cream focus:ring-burgundy;
+  }
+
+  .card {
+    @apply bg-white rounded-md shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-sand rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-rose-gold focus:border-transparent transition duration-200;
+  }
+
+  .form-group {
+    @apply mb-4;
+  }
+
+  .label {
+    @apply block text-sm font-medium mb-1 text-burgundy;
+  }
+
+  .divider {
+    @apply my-6 h-px bg-sand-light relative;
+  }
+
+  .divider-fancy::before {
+    content: "❦";
+    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cream px-4 text-rose-gold text-lg;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-rose-gold rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-burgundy-light;
+}
